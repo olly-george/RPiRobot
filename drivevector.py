@@ -1,6 +1,8 @@
+"""Vector that is used to determine wheel speed and robot direction"""
 import sys
 
 class drivevector:
+    """The vector class"""
     def __init__(self, x, y):
         self.x = x
         self.y = y
