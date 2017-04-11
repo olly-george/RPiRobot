@@ -6,11 +6,11 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 
-GPIO.output(22, true)
-GPIO.output(23, false)
+GPIO.output(22, 1)
+GPIO.output(23, 0)
 
 time.sleep(2)
 
-GPIO.output(22, false)
-GPIO.output(23, false)
+GPIO.output(22, 0)
+GPIO.output(23, 0)
 
