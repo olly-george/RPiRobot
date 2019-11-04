@@ -19,13 +19,13 @@
     <body>
             <div class="grid-container">
                     <div class="grid-item"></div>
-                    <div class="grid-item" onclick="forward();"><img src="static/forward.png" onclick="forward();" height="64" width="64"/></div>
+                    <div class="grid-item" onclick="forward();"><img src="static/forward.png" onmousedown="forward();" onmouseup="stop();" height="64" width="64"/></div>
                     <div class="grid-item"></div>  
-                    <div class="grid-item" onclick="left();"><img src="static/left.png" onclick="left();" height="64" width="64"/></div>
+                    <div class="grid-item" onclick="left();"><img src="static/left.png" onmousedown="left();" onmouseup="stop();" height="64" width="64"/></div>
                     <div class="grid-item"></div>
-                    <div class="grid-item" onclick="right();"><img src="static/right.png" onclick="right();" height="64" width="64"/></div>
+                    <div class="grid-item" onclick="right();"><img src="static/right.png" onmousedown="right();" onmouseup="stop();" height="64" width="64"/></div>
                     <div class="grid-item"></div>
-                    <div class="grid-item" onclick="backward();"><img src="static/backward.png" onclick="backward();" height="64" width="64"/></div>
+                    <div class="grid-item" onclick="backward();"><img src="static/backward.png" onmousedown="backward();" onmouseup="stop();" height="64" width="64"/></div>
                     <div class="grid-item"></div>  
                   </div>
                   <script>
@@ -40,6 +40,9 @@
                   }
                   function right(){
                     sendMessage("right");
+                  }
+                  function stop(){
+                    sendMessage("stop");
                   }
                   function sendMessage(msg){
                         var request = new XMLHttpRequest();

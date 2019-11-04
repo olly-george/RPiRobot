@@ -51,6 +51,13 @@ def right():
     GPIO.output(22, 0)
     return "OK"
 
+@app.route("/stop", methods=["POST"])
+def stop():
+    GPIO.output(17, 0)
+    GPIO.output(22, 0)
+    GPIO.output(18, 0)
+    GPIO.output(23, 0)
+    return "OK"
 
 
 
