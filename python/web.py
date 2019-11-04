@@ -19,36 +19,24 @@ def index():
 def forward():
     GPIO.output(17, 1)
     GPIO.output(23, 1)
-    time.sleep(0.4)
-    GPIO.output(17, 0)
-    GPIO.output(23, 0)
     return "OK"
 
 @app.route("/backward", methods=["POST"])
 def backward():
     GPIO.output(18, 1)
     GPIO.output(22, 1)
-    time.sleep(0.4)
-    GPIO.output(18, 0)
-    GPIO.output(22, 0)
     return "OK"
 
 @app.route("/left", methods=["POST"])
 def left():
     GPIO.output(18, 1)
     GPIO.output(23, 1)
-    time.sleep(0.1)
-    GPIO.output(18, 0)
-    GPIO.output(23, 0)
     return "OK"
 
 @app.route("/right", methods=["POST"])
 def right():
     GPIO.output(17, 1)
     GPIO.output(22, 1)
-    time.sleep(0.1)
-    GPIO.output(17, 0)
-    GPIO.output(22, 0)
     return "OK"
 
 @app.route("/stop", methods=["POST"])
